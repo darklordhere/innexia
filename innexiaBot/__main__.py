@@ -105,7 +105,8 @@ buttons = [
 
 HELP_STRINGS = """
 **SETTINGS**
-`Click on the buttons below to get documentation about specific modules..`)"""
+
+`Click on the buttons below to get documentation about specific modules..`[)](https://telegra.ph/file/c97c2fd34aaf534d3f153.jpg)"""
 
 
 
@@ -417,7 +418,7 @@ def innexia_about_callback(update, context):
     elif query.data == "innexia_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, Innexia now ready to manage your group."
+            f"\nCongragulations, Makima is now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -450,12 +451,12 @@ def innexia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/waifuhunters"),
-                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/waifuhunters"),
+                    InlineKeyboardButton(text="♦️ Support", url="t.me/waifuhunters"),
+                   
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/waifuhunters"),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/waifuhunters"),
+                    InlineKeyboardButton(text="⚡ Discussion", url="t.me/global_talks"),
+                    
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
