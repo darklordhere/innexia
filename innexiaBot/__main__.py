@@ -72,11 +72,11 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-INNEXIA_IMG = "https://telegra.ph/file/c6e014871e5dfc89b8ad2.jpg"
+INNEXIA_IMG = "https://telegra.ph/file/596c02fa03a41acf99280.jpg"
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **MAKIMA** `your super group bot`
-`I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
+🔆`Heya`,(https://telegra.ph/file/c6e014871e5dfc89b8ad2.jpg) `I am` **MAKIMA** `bot`
+⚡`Advance Group Management Bot with Awesome Features , Add me as Admin in your Group to Manage it with Ease ! `
 """
 
 buttons = [
@@ -85,9 +85,9 @@ buttons = [
             text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ", url=f"https://github.com/DarkCybers/innexia"),
+        InlineKeyboardButton(text="🔥 Gaming Chat", url=f"https://t.me/waifuhunters"),
         InlineKeyboardButton(
-            text="Vᴄ Pʟᴀʏᴇʀ 🎶", url=f"https://telegra.ph/Innexia-Vc-Player-08-19"
+            text="♦️ Global Talks", url=f"https://t.me/Global_Talks"
         ),
     ],
     [
@@ -109,7 +109,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @SiderzDonate's 💕"""
+ @WaifuHunters's 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -367,10 +367,10 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bᴜɢ'ꜱ", url="t.me/waifuhunters"
+                            text="♦️ Global Talks", url="t.me/Global_Talks"
                         ),
                         InlineKeyboardButton(
-                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/waifuhunters"
+                            text="♦️ Gaming Group", url="t.me/waifuhunters"
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="innexia_back")],
@@ -388,7 +388,7 @@ def innexia_about_callback(update, context):
 
     elif query.data == "innexia_basichelp":
         query.message.edit_text(
-            text=f"*Here's basic Help regarding* *How to use Me?*"
+            text=f"*♦️ Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
             f"\n• Than send `/admincache@Makimagroupbot` in that chat to refresh admin list in My database.\n"
@@ -466,17 +466,17 @@ def innexia_about_callback(update, context):
     elif query.data == "innexia_credit":
         query.message.edit_text(
             text=f"<b> CREDIT FOR MAKIMA DEV'S</b>\n"
-            f"\nHere Some Developers Helping in Making The Innexia Bot",
+            f"\nHere Some Developers Helping in Making The Makima Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
 
-                    InlineKeyboardButton(text="Bʟᴀᴢᴇ", url="t.me/xeromax"),
+                    InlineKeyboardButton(text="Owner", url="t.me/xeromax"),
                  ],
                  [
-                    InlineKeyboardButton(text="Iɴꜰɪɴɪᴛʏ", url="t.me/fookinsupernova"),
-                    InlineKeyboardButton(text="Zᴀʟɪᴍ", url="https://t.me/animematrix"),
+                    InlineKeyboardButton(text="Alt ID", url="t.me/fookinsupernova"),
+                    InlineKeyboardButton(text="Community", url="https://t.me/animematrix"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
@@ -492,8 +492,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Makima*
-                 \nHere is the [🔥Source Code🔥](https://github.com/DarkCybers/innexiaBot) .""",
+            text=""" ♦️ Hi.. I'm *Makima*
+                 \nHere is the [🔥 Gaming Chat ](t.me/waifuhunters) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
