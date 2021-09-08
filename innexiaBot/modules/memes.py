@@ -17,7 +17,7 @@ from telegram.ext import Filters, MessageHandler,  CommandHandler, run_async
 from telegram.utils.helpers import mention_html, escape_markdown
 
 from innexiaBot import dispatcher, DRAGONS, DEMONS, LOGGER, SUPPORT_CHAT
-from inmexiaBot.modules.disable import DisableAbleCommandHandler
+from innexiaBot.modules.disable import DisableAbleCommandHandler
 from innexiaBot.modules.helper_funcs.extraction import extract_user
 
 
