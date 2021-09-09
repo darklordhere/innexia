@@ -1,5 +1,6 @@
 from envparse import env
 from innexiaBot import LOGGER
+from os import getenv
 
 DEFAULTS = {
     "LOAD_MODULES": True,
