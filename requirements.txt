@@ -5,7 +5,6 @@ lxml
 wget
 gtts
 faker
-nltk
 beautifulsoup4
 requests==2.20.0
 python-telegram-bot==12.8
@@ -46,14 +45,12 @@ cachetools
 ujson
 pretty_errors
 tgcrypto
-pytgcalls[pyrogram]
 pyrogram
 python-dotenv
 youtube_dl
 youtube_search_python
 youtube_search
 asyncio
-ffmpeg-python
 python-arq
 dateparser==1.0.0
 pymongo
