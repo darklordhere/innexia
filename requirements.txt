@@ -5,6 +5,7 @@ lxml
 wget
 gtts
 faker
+nltk
 beautifulsoup4
 requests==2.20.0
 python-telegram-bot==12.8
