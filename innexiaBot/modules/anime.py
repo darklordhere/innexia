@@ -5,6 +5,7 @@ import textwrap
 import bs4
 import jikanpy
 import requests
+from telegram.utils.helpers import mention_html
 from innexiaBot import DEV_USERS, OWNER_ID, DRAGONS, dispatcher
 from innexiaBot.modules.disable import DisableAbleCommandHandler
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
@@ -551,6 +552,18 @@ def kaizoku(update: Update, context: CallbackContext):
 def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
 
+@run_async
+def meme(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    meme = requests.get("https://meme-api.herokuapp.com/gimme/Animemes/").json()
+    image = meme.get("url")
+    caption = meme.get("title")
+    if not image:
+        msg.reply_text("No URL was received from the API!")
+        return
+    msg.reply_photo(
+                photo=image, caption=caption)
+
 
 __help__ = """
 Get information about anime, manga or characters from [AniList](anilist.co).
@@ -563,7 +576,8 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
  • `/kayo <anime>`*:* search an anime on animekayo.com
  • `/airing <anime>`*:* returns anime airing info.
- • /whatanime - reply to gif or video
+ • `/whatanime` *:* reply to gif or video
+ • `/meme` *:* gives you random op memes.
  """
 
 ANIME_HANDLER = DisableAbleCommandHandler("anime", anime)
@@ -575,6 +589,7 @@ UPCOMING_HANDLER = DisableAbleCommandHandler("upcoming", upcoming)
 KAIZOKU_SEARCH_HANDLER = DisableAbleCommandHandler("kaizoku", kaizoku)
 KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
+MEME_HANDLER = DisableAbleCommandHandler("meme", meme)
 
 dispatcher.add_handler(BUTTON_HANDLER)
 dispatcher.add_handler(ANIME_HANDLER)
@@ -585,6 +600,7 @@ dispatcher.add_handler(USER_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
+dispatcher.add_handler(MEME_HANDLER)
 
 __mod_name__ = "Anime"
 __command_list__ = [
