@@ -32,3 +32,5 @@ def get_int_key(name, required=False):
         sys.exit(2)
     else:
         return data
+
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
