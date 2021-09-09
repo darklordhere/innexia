@@ -1,6 +1,5 @@
 from envparse import env
 from innexiaBot import LOGGER
-from os import getenv
 
 DEFAULTS = {
     "LOAD_MODULES": True,
@@ -34,4 +33,3 @@ def get_int_key(name, required=False):
     else:
         return data
 
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
