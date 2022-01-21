@@ -83,16 +83,10 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
+            text="❔ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(text="🔥 Gaming Chat", url=f"https://t.me/waifuhunters"),
-        InlineKeyboardButton(
-            text="♦️ Global Talks", url=f"https://t.me/Global_Talks"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="📜 Aʙᴏᴜᴛ", callback_data="innexia_"),
         InlineKeyboardButton(
             text="Bᴀꜱɪᴄ Hᴇʟᴘ 👮", callback_data="innexia_basichelp"
         ),
@@ -369,9 +363,6 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="♦️ Global Talks", url="t.me/Global_Talks"
-                        ),
-                        InlineKeyboardButton(
                             text="♦️ Gaming Group", url="t.me/waifuhunters"
                         ),
                     ],
@@ -453,10 +444,6 @@ def innexia_about_callback(update, context):
                  [
                     InlineKeyboardButton(text="♦️ Support", url="t.me/waifuhunters"),
                    
-                 ],
-                 [
-                    InlineKeyboardButton(text="⚡ Discussion", url="t.me/global_talks"),
-                    
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
