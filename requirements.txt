@@ -47,9 +47,6 @@ pretty_errors
 tgcrypto
 pyrogram
 python-dotenv
-youtube_dl
-youtube_search_python
-youtube_search
 asyncio
 python-arq
 dateparser==1.0.0
